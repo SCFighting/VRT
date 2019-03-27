@@ -16,6 +16,7 @@
 		522E91E7224B7526007C6345 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 522E91E6224B7526007C6345 /* main.m */; };
 		522E91F1224B7526007C6345 /* RVTTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 522E91F0224B7526007C6345 /* RVTTests.m */; };
 		522E91FC224B7526007C6345 /* RVTUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 522E91FB224B7526007C6345 /* RVTUITests.m */; };
+		D826A88AF0EB575D477822BF /* Pods_RVT.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 546CDF704AD79090D4D5863D /* Pods_RVT.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +37,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		104D5BD44A51FDA6B484E9F8 /* Pods-RVT.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RVT.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RVT/Pods-RVT.debug.xcconfig"; sourceTree = "<group>"; };
+		239681108C4655E4B8748F6F /* Pods-RVT.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RVT.release.xcconfig"; path = "Pods/Target Support Files/Pods-RVT/Pods-RVT.release.xcconfig"; sourceTree = "<group>"; };
 		522E91D1224B7523007C6345 /* RVT.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RVT.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		522E91D4224B7523007C6345 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		522E91D5224B7523007C6345 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -53,6 +56,7 @@
 		522E91F7224B7526007C6345 /* RVTUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RVTUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		522E91FB224B7526007C6345 /* RVTUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RVTUITests.m; sourceTree = "<group>"; };
 		522E91FD224B7526007C6345 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		546CDF704AD79090D4D5863D /* Pods_RVT.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RVT.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +64,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D826A88AF0EB575D477822BF /* Pods_RVT.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -87,6 +92,8 @@
 				522E91EF224B7526007C6345 /* RVTTests */,
 				522E91FA224B7526007C6345 /* RVTUITests */,
 				522E91D2224B7523007C6345 /* Products */,
+				7F8C57EFE09334CBFC9B9C14 /* Pods */,
+				C48F7D3A9C432E8D54ADD4C2 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -135,6 +142,23 @@
 			path = RVTUITests;
 			sourceTree = "<group>";
 		};
+		7F8C57EFE09334CBFC9B9C14 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				104D5BD44A51FDA6B484E9F8 /* Pods-RVT.debug.xcconfig */,
+				239681108C4655E4B8748F6F /* Pods-RVT.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		C48F7D3A9C432E8D54ADD4C2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				546CDF704AD79090D4D5863D /* Pods_RVT.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -142,6 +166,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 522E9200224B7526007C6345 /* Build configuration list for PBXNativeTarget "RVT" */;
 			buildPhases = (
+				8DB402203B1584F93656E7DF /* [CP] Check Pods Manifest.lock */,
 				522E91CD224B7523007C6345 /* Sources */,
 				522E91CE224B7523007C6345 /* Frameworks */,
 				522E91CF224B7523007C6345 /* Resources */,
@@ -259,6 +284,31 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		8DB402203B1584F93656E7DF /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-RVT-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		522E91CD224B7523007C6345 /* Sources */ = {
@@ -437,12 +487,13 @@
 		};
 		522E9201224B7526007C6345 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 104D5BD44A51FDA6B484E9F8 /* Pods-RVT.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = T5HZGRL3NY;
 				INFOPLIST_FILE = RVT/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -455,12 +506,13 @@
 		};
 		522E9202224B7526007C6345 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 239681108C4655E4B8748F6F /* Pods-RVT.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = T5HZGRL3NY;
 				INFOPLIST_FILE = RVT/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
