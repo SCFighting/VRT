@@ -11,5 +11,6 @@ use_frameworks!
 
 xcodeproj 'RVT.xcodeproj'
 target :RVT do
+    pod 'GPUImage', '~> 0.1.7'
 end
 
