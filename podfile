@@ -1,0 +1,18 @@
+=begin
+	针对RVT.xcodeproj项目的RVT的 target 填写的 pods 文件
+=end
+
+#使用 framework
+use_frameworks!
+
+#ios8.0 已上
+platform : ios '8.0'
+
+#忽略所有警告
+inhibit_all_warnings!
+
+#针对RVT.xcodeproj这个工程的RVT target导入依赖库
+xcodeproj 'RVT.xcodeproj'
+target : RVT do
+end
+
