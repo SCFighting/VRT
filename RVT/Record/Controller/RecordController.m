@@ -7,9 +7,8 @@
 //
 
 #import "RecordController.h"
-
+#import <GPUImage/GPUImage.h>
 @interface RecordController ()
-
 @end
 
 @implementation RecordController
