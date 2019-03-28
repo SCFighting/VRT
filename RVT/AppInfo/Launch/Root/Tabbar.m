@@ -13,7 +13,7 @@
 - (instancetype)initWithCenterImage:(NSString *)centerImage selectImage:(NSString *)selectImage target:(id)target action:(SEL)action {
     if (self = [super init]) {
         self.userInteractionEnabled = YES;
-        self.tintColor = UIColor.yellowColor;
+        self.tintColor = [UIColor colorWithRed:16/255.0 green:172/255.0 blue:177/255.0 alpha:1.0];
         self.translucent = YES;
         [self.centerButton setBackgroundImage:[UIImage imageNamed:centerImage] forState:UIControlStateNormal];
         [self.centerButton setBackgroundImage:[UIImage imageNamed:selectImage] forState:UIControlStateHighlighted];
