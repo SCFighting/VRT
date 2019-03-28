@@ -32,6 +32,11 @@
 		52F427BF224C6B660077D0C1 /* BaseView.m in Sources */ = {isa = PBXBuildFile; fileRef = 52F427BE224C6B660077D0C1 /* BaseView.m */; };
 		52F427C0224C6B660077D0C1 /* BaseView.m in Sources */ = {isa = PBXBuildFile; fileRef = 52F427BE224C6B660077D0C1 /* BaseView.m */; };
 		52F427C1224C6B660077D0C1 /* BaseView.m in Sources */ = {isa = PBXBuildFile; fileRef = 52F427BE224C6B660077D0C1 /* BaseView.m */; };
+		52F427C5224C9F4C0077D0C1 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 52F427C4224C9F4C0077D0C1 /* RootViewController.m */; };
+		52F427C8224C9F980077D0C1 /* Tabbar.m in Sources */ = {isa = PBXBuildFile; fileRef = 52F427C7224C9F980077D0C1 /* Tabbar.m */; };
+		52F427CA224CA5230077D0C1 /* AppIcon.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 52F427C9224CA5230077D0C1 /* AppIcon.xcassets */; };
+		52F427CB224CA5230077D0C1 /* AppIcon.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 52F427C9224CA5230077D0C1 /* AppIcon.xcassets */; };
+		52F427CC224CA5230077D0C1 /* AppIcon.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 52F427C9224CA5230077D0C1 /* AppIcon.xcassets */; };
 		D826A88AF0EB575D477822BF /* Pods_RVT.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 546CDF704AD79090D4D5863D /* Pods_RVT.framework */; };
 /* End PBXBuildFile section */
 
@@ -75,6 +80,11 @@
 		52F427B9224C6B3F0077D0C1 /* BaseTabBarController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseTabBarController.m; sourceTree = "<group>"; };
 		52F427BD224C6B660077D0C1 /* BaseView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseView.h; sourceTree = "<group>"; };
 		52F427BE224C6B660077D0C1 /* BaseView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseView.m; sourceTree = "<group>"; };
+		52F427C3224C9F4C0077D0C1 /* RootViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
+		52F427C4224C9F4C0077D0C1 /* RootViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
+		52F427C6224C9F980077D0C1 /* Tabbar.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Tabbar.h; sourceTree = "<group>"; };
+		52F427C7224C9F980077D0C1 /* Tabbar.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Tabbar.m; sourceTree = "<group>"; };
+		52F427C9224CA5230077D0C1 /* AppIcon.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = AppIcon.xcassets; sourceTree = "<group>"; };
 		546CDF704AD79090D4D5863D /* Pods_RVT.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RVT.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -195,6 +205,7 @@
 		52F42783224C653F0077D0C1 /* Launch */ = {
 			isa = PBXGroup;
 			children = (
+				52F427C2224C73A60077D0C1 /* Root */,
 				52F42784224C653F0077D0C1 /* Appdelegate */,
 				52F42787224C653F0077D0C1 /* Resource */,
 			);
@@ -216,8 +227,20 @@
 				52F427AA224C67580077D0C1 /* Images.xcassets */,
 				52F4278F224C653F0077D0C1 /* main.m */,
 				52F42790224C653F0077D0C1 /* Info.plist */,
+				52F427C9224CA5230077D0C1 /* AppIcon.xcassets */,
 			);
 			path = Resource;
+			sourceTree = "<group>";
+		};
+		52F427C2224C73A60077D0C1 /* Root */ = {
+			isa = PBXGroup;
+			children = (
+				52F427C3224C9F4C0077D0C1 /* RootViewController.h */,
+				52F427C4224C9F4C0077D0C1 /* RootViewController.m */,
+				52F427C6224C9F980077D0C1 /* Tabbar.h */,
+				52F427C7224C9F980077D0C1 /* Tabbar.m */,
+			);
+			path = Root;
 			sourceTree = "<group>";
 		};
 		7F8C57EFE09334CBFC9B9C14 /* Pods */ = {
@@ -342,6 +365,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				52F427CA224CA5230077D0C1 /* AppIcon.xcassets in Resources */,
 				52F427AB224C67580077D0C1 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -352,6 +376,7 @@
 			files = (
 				52F427A4224C653F0077D0C1 /* Info.plist in Resources */,
 				52F427AC224C67580077D0C1 /* Images.xcassets in Resources */,
+				52F427CB224CA5230077D0C1 /* AppIcon.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -361,6 +386,7 @@
 			files = (
 				52F427A5224C653F0077D0C1 /* Info.plist in Resources */,
 				52F427AD224C67580077D0C1 /* Images.xcassets in Resources */,
+				52F427CC224CA5230077D0C1 /* AppIcon.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -431,11 +457,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				52F427BA224C6B3F0077D0C1 /* BaseTabBarController.m in Sources */,
+				52F427C5224C9F4C0077D0C1 /* RootViewController.m in Sources */,
 				52F427B5224C6B200077D0C1 /* BaseNavigationController.m in Sources */,
 				52F427A0224C653F0077D0C1 /* main.m in Sources */,
 				52F427B0224C6B030077D0C1 /* BaseController.m in Sources */,
 				52F42791224C653F0077D0C1 /* AppDelegate.m in Sources */,
 				52F427BF224C6B660077D0C1 /* BaseView.m in Sources */,
+				52F427C8224C9F980077D0C1 /* Tabbar.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
