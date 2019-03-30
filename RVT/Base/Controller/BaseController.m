@@ -14,6 +14,12 @@
 
 @implementation BaseController
 
+-(void)loadView
+{
+    [super loadView];
+    [self.view setBackgroundColor:UIColor.whiteColor];
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
