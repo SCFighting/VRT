@@ -7,7 +7,8 @@
 //
 
 #import "BaseController.h"
-
+#import <GLKit/GLKit.h>
+#import <OpenGLES/ES3/gl.h>
 @interface BaseController ()
 
 @end

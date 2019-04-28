@@ -3,12 +3,12 @@ PODS:
     - SDWebImage
     - SVProgressHUD
   - GPUImage (0.1.7)
-  - IQKeyboardManager (6.2.0)
+  - IQKeyboardManager (6.2.1)
   - Masonry (1.1.0)
-  - ReactiveObjC (3.1.0)
-  - SDWebImage (4.4.6):
-    - SDWebImage/Core (= 4.4.6)
-  - SDWebImage/Core (4.4.6)
+  - ReactiveObjC (3.1.1)
+  - SDWebImage (5.0.2):
+    - SDWebImage/Core (= 5.0.2)
+  - SDWebImage/Core (5.0.2)
   - SVProgressHUD (2.2.5)
 
 DEPENDENCIES:
@@ -31,12 +31,12 @@ SPEC REPOS:
 SPEC CHECKSUMS:
   AFNNetworking: c0a09b2950113cc8a939c0c8de4f91bf7020737a
   GPUImage: 733a5f0fab92df9de1c37ba9df520a833ccb406d
-  IQKeyboardManager: 6194101620b73af5e67900b8f89707a99de0b804
+  IQKeyboardManager: 964638372b4a61892cc74fdfa6fd26de8c9464a2
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
-  ReactiveObjC: 2a38ea15335de4119d8b17caf1db1484f61db902
-  SDWebImage: 3f3f0c02f09798048c47a5ed0a13f17b063572d8
+  ReactiveObjC: 011caa393aa0383245f2dcf9bf02e86b80b36040
+  SDWebImage: 6764b5fa0f73c203728052955dbefa2bf1f33282
   SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
 
-PODFILE CHECKSUM: 4883aeeed3f670b8fe459a06a87c414bd3b02931
+PODFILE CHECKSUM: 096101f5de92fa4913cae9288f95751e00575c8e
 
 COCOAPODS: 1.5.3

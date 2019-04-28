@@ -10,6 +10,7 @@
 @interface RecordController ()
 @property (nonatomic , strong ) GPUImageVideoCamera *videoCamera;
 @property (nonatomic , strong ) GPUImageFilter *defaultFilter;
+@property (nonatomic , strong ) GPUImageTwoInputFilter *fixFilter;
 @property (nonatomic , strong ) GPUImageUIElement *vieweEement;
 @property (nonatomic , strong ) GPUImageView *gpuImageView;
 @property (nonatomic , strong ) GPUImageMovieWriter *movieWriter;
@@ -38,57 +39,11 @@
 -(void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(deviceOrientationDidChange:) name:UIDeviceOrientationDidChangeNotification object:nil];
 }
 
 - (void)viewDidDisappear:(BOOL)animated
 {
     [super viewDidDisappear:animated];
-    [[NSNotificationCenter defaultCenter] removeObserver:self name:UIDeviceOrientationDidChangeNotification object:nil];
-}
-
-#pragma mark -- Notification
-
--(void)deviceOrientationDidChange:(NSNotification *)notification
-{
-    UIDeviceOrientation deviceOrientation = [UIDevice currentDevice].orientation;
-    switch (deviceOrientation) {
-        case UIDeviceOrientationFaceUp:
-            NSLog(@"屏幕朝上平躺");
-            break;
-            
-        case UIDeviceOrientationFaceDown:
-            NSLog(@"屏幕朝下平躺");
-            break;
-            
-        case UIDeviceOrientationUnknown:
-            NSLog(@"未知方向");
-            break;
-            
-        case UIDeviceOrientationLandscapeLeft:
-            NSLog(@"屏幕向左横置");
-            self.videoCamera.outputImageOrientation = UIInterfaceOrientationLandscapeRight;
-            break;
-            
-        case UIDeviceOrientationLandscapeRight:
-            NSLog(@"屏幕向右橫置");
-            self.videoCamera.outputImageOrientation = UIInterfaceOrientationLandscapeLeft;
-            break;
-            
-        case UIDeviceOrientationPortrait:
-            NSLog(@"屏幕直立");
-            self.videoCamera.outputImageOrientation = UIInterfaceOrientationPortrait;
-            break;
-            
-        case UIDeviceOrientationPortraitUpsideDown:
-            self.videoCamera.outputImageOrientation = UIDeviceOrientationPortraitUpsideDown;
-            NSLog(@"屏幕直立，上下顛倒");
-            break;
-            
-        default:
-            NSLog(@"无法辨识");
-            break;
-    }
 }
 
 
