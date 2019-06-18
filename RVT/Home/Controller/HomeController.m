@@ -9,24 +9,40 @@
 #import "HomeController.h"
 
 @interface HomeController ()
-
+@property (nonatomic  ,  copy ) NSString *str ;
 @end
 
 @implementation HomeController
+
+-(instancetype)init
+{
+    if (self = [super init]) {
+        _str = NSStringFromClass([self class]);
+    }
+    return self;
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+-(void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    NSLog(@"%@str指针地址=%p,str=%@",NSStringFromClass([self class]),&_str,_str);
 }
-*/
+
+-(void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
+{
+    [super touchesBegan:touches withEvent:event];
+    TestController *vc = [[TestController alloc] init];
+   
+    vc.str = NSStringFromClass([self class]);
+    NSString *tt;
+    [vc method2:&tt];
+    NSLog(@"tt=%@",tt);
+    [self.navigationController pushViewController:vc animated:YES];
+}
 
 @end

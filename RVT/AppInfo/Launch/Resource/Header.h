@@ -11,4 +11,5 @@
 
 #import <Masonry/Masonry.h>
 #import <GPUImage/GPUImage.h>
+#import "TestController.h"
 #endif /* Header_h */

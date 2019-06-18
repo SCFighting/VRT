@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		522E91F1224B7526007C6345 /* RVTTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 522E91F0224B7526007C6345 /* RVTTests.m */; };
 		522E91FC224B7526007C6345 /* RVTUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 522E91FB224B7526007C6345 /* RVTUITests.m */; };
+		52DA54622283CE39008E6AB9 /* TestController.m in Sources */ = {isa = PBXBuildFile; fileRef = 52DA54612283CE39008E6AB9 /* TestController.m */; };
 		52F42791224C653F0077D0C1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 52F42786224C653F0077D0C1 /* AppDelegate.m */; };
 		52F42792224C653F0077D0C1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 52F42786224C653F0077D0C1 /* AppDelegate.m */; };
 		52F42793224C653F0077D0C1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 52F42786224C653F0077D0C1 /* AppDelegate.m */; };
@@ -84,6 +85,8 @@
 		522E91F7224B7526007C6345 /* RVTUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RVTUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		522E91FB224B7526007C6345 /* RVTUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RVTUITests.m; sourceTree = "<group>"; };
 		522E91FD224B7526007C6345 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		52DA54602283CE39008E6AB9 /* TestController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestController.h; sourceTree = "<group>"; };
+		52DA54612283CE39008E6AB9 /* TestController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestController.m; sourceTree = "<group>"; };
 		52F42785224C653F0077D0C1 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		52F42786224C653F0077D0C1 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		52F4278F224C653F0077D0C1 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -166,6 +169,7 @@
 		522E91D3224B7523007C6345 /* RVT */ = {
 			isa = PBXGroup;
 			children = (
+				52DA545F2283CE1E008E6AB9 /* TestCode */,
 				52F4274B224C5FE20077D0C1 /* AppInfo */,
 				52F4273B224C5FE20077D0C1 /* Base */,
 				52F427D3224CA6430077D0C1 /* Community */,
@@ -193,6 +197,15 @@
 				522E91FD224B7526007C6345 /* Info.plist */,
 			);
 			path = RVTUITests;
+			sourceTree = "<group>";
+		};
+		52DA545F2283CE1E008E6AB9 /* TestCode */ = {
+			isa = PBXGroup;
+			children = (
+				52DA54602283CE39008E6AB9 /* TestController.h */,
+				52DA54612283CE39008E6AB9 /* TestController.m */,
+			);
+			path = TestCode;
 			sourceTree = "<group>";
 		};
 		52F4273B224C5FE20077D0C1 /* Base */ = {
@@ -576,6 +589,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				52F427BA224C6B3F0077D0C1 /* BaseTabBarController.m in Sources */,
+				52DA54622283CE39008E6AB9 /* TestController.m in Sources */,
 				52F427C5224C9F4C0077D0C1 /* RootViewController.m in Sources */,
 				52F427B5224C6B200077D0C1 /* BaseNavigationController.m in Sources */,
 				52F427F2224CADCC0077D0C1 /* RecordController.m in Sources */,
