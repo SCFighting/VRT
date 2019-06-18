@@ -34,14 +34,23 @@
     // 我的
     MineController *mineVC = [[MineController alloc]init];
     [self setViewController:mineVC title:@"我的" image:@"TB_mine_normal" selectImage:@"TB_mine_press"];
-    
-    self.tabbar = [[Tabbar alloc]initWithCenterImage:@"homePage_saoyisao" selectImage:@"homePage_saoyisao" target:self action:@selector(CenterButtonClick)];
     [self setValue:self.tabbar forKey:@"tabBar"];
 }
 
 - (void)CenterButtonClick {
     RecordController *centerVC = [[RecordController alloc]init];
     [self presentViewController:centerVC animated:YES completion:nil];
+}
+
+
+#pragma mark -- getter
+
+-(Tabbar *)tabbar
+{
+    if (_tabbar == nil) {
+        _tabbar = [[Tabbar alloc]initWithCenterImage:@"homePage_saoyisao" selectImage:@"homePage_saoyisao" target:self action:@selector(CenterButtonClick)];
+    }
+    return _tabbar;
 }
 
 #pragma mark - 添加子控制器

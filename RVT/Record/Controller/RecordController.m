@@ -46,6 +46,11 @@
     [super viewDidDisappear:animated];
 }
 
+-(void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
+{
+    [super touchesBegan:touches withEvent:event];
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
 
 #pragma mark -- getter
 
