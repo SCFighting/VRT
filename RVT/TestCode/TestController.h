@@ -12,7 +12,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface TestController : BaseController
 @property (nonatomic  ,  copy ) NSString *str;
-- (void)method2:(NSString **)obj;
+- (void)method2:(NSString *_Nullable*_Nullable)obj;
 @end
 
 NS_ASSUME_NONNULL_END
