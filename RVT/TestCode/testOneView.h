@@ -1,17 +1,17 @@
 //
-//  TestController.h
+//  testOneView.h
 //  RVT
 //
 //  Created by SC on 2020/1/10.
 //  Copyright © 2020 SC. All rights reserved.
 //
 
-#import "BaseController.h"
+#import "BaseView.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface TestController : BaseController
-
+@interface testOneView : BaseView
+@property(nonatomic,copy)void ((^testBlock)(void));
 @end
 
 NS_ASSUME_NONNULL_END

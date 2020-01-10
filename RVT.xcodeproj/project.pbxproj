@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		522E91F1224B7526007C6345 /* RVTTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 522E91F0224B7526007C6345 /* RVTTests.m */; };
 		522E91FC224B7526007C6345 /* RVTUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 522E91FB224B7526007C6345 /* RVTUITests.m */; };
+		52C1221623C86AE300A5C78D /* testTwoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 52C1221223C86AE300A5C78D /* testTwoView.m */; };
+		52C1221723C86AE300A5C78D /* testOneView.m in Sources */ = {isa = PBXBuildFile; fileRef = 52C1221523C86AE300A5C78D /* testOneView.m */; };
 		52DA54622283CE39008E6AB9 /* TestController.m in Sources */ = {isa = PBXBuildFile; fileRef = 52DA54612283CE39008E6AB9 /* TestController.m */; };
 		52F42791224C653F0077D0C1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 52F42786224C653F0077D0C1 /* AppDelegate.m */; };
 		52F42792224C653F0077D0C1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 52F42786224C653F0077D0C1 /* AppDelegate.m */; };
@@ -85,6 +87,10 @@
 		522E91F7224B7526007C6345 /* RVTUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RVTUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		522E91FB224B7526007C6345 /* RVTUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RVTUITests.m; sourceTree = "<group>"; };
 		522E91FD224B7526007C6345 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		52C1221223C86AE300A5C78D /* testTwoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = testTwoView.m; sourceTree = "<group>"; };
+		52C1221323C86AE300A5C78D /* testOneView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = testOneView.h; sourceTree = "<group>"; };
+		52C1221423C86AE300A5C78D /* testTwoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = testTwoView.h; sourceTree = "<group>"; };
+		52C1221523C86AE300A5C78D /* testOneView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = testOneView.m; sourceTree = "<group>"; };
 		52DA54602283CE39008E6AB9 /* TestController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestController.h; sourceTree = "<group>"; };
 		52DA54612283CE39008E6AB9 /* TestController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestController.m; sourceTree = "<group>"; };
 		52F42785224C653F0077D0C1 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -202,6 +208,10 @@
 		52DA545F2283CE1E008E6AB9 /* TestCode */ = {
 			isa = PBXGroup;
 			children = (
+				52C1221323C86AE300A5C78D /* testOneView.h */,
+				52C1221523C86AE300A5C78D /* testOneView.m */,
+				52C1221423C86AE300A5C78D /* testTwoView.h */,
+				52C1221223C86AE300A5C78D /* testTwoView.m */,
 				52DA54602283CE39008E6AB9 /* TestController.h */,
 				52DA54612283CE39008E6AB9 /* TestController.m */,
 			);
@@ -557,6 +567,7 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-RVT/Pods-RVT-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/AFNNetworking/AFNNetworking.framework",
+				"${BUILT_PRODUCTS_DIR}/CocoaLumberjack/CocoaLumberjack.framework",
 				"${BUILT_PRODUCTS_DIR}/GPUImage/GPUImage.framework",
 				"${BUILT_PRODUCTS_DIR}/IQKeyboardManager/IQKeyboardManager.framework",
 				"${BUILT_PRODUCTS_DIR}/Masonry/Masonry.framework",
@@ -569,6 +580,7 @@
 			);
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AFNNetworking.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CocoaLumberjack.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GPUImage.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManager.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Masonry.framework",
@@ -593,6 +605,8 @@
 				52F427C5224C9F4C0077D0C1 /* RootViewController.m in Sources */,
 				52F427B5224C6B200077D0C1 /* BaseNavigationController.m in Sources */,
 				52F427F2224CADCC0077D0C1 /* RecordController.m in Sources */,
+				52C1221723C86AE300A5C78D /* testOneView.m in Sources */,
+				52C1221623C86AE300A5C78D /* testTwoView.m in Sources */,
 				52F427DE224CA6A90077D0C1 /* FunctionController.m in Sources */,
 				52F427E8224CA6D70077D0C1 /* MineController.m in Sources */,
 				52F427A0224C653F0077D0C1 /* main.m in Sources */,
@@ -784,7 +798,7 @@
 				GCC_PREFIX_HEADER = "$(PROJECT_DIR)/RVT/AppInfo/Launch/Resource/PrefixHeader.pch";
 				HEADER_SEARCH_PATHS = "$(PROJECT_DIR)";
 				INFOPLIST_FILE = "$(PROJECT_DIR)/RVT/AppInfo/Launch/Resource/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -807,7 +821,7 @@
 				GCC_PREFIX_HEADER = "$(PROJECT_DIR)/RVT/AppInfo/Launch/Resource/PrefixHeader.pch";
 				HEADER_SEARCH_PATHS = "$(PROJECT_DIR)";
 				INFOPLIST_FILE = "$(PROJECT_DIR)/RVT/AppInfo/Launch/Resource/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

@@ -14,6 +14,7 @@
 @property (nonatomic , strong ) GPUImageUIElement *vieweEement;
 @property (nonatomic , strong ) GPUImageView *gpuImageView;
 @property (nonatomic , strong ) GPUImageMovieWriter *movieWriter;
+@property (nonatomic , strong ) GPUImagePicture *picture;
 @property (nonatomic , strong ) UIView *sourceView;
 @end
 
@@ -30,9 +31,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self.videoCamera addTarget:self.defaultFilter];
-    [self.defaultFilter addTarget:self.gpuImageView];
-    [self.videoCamera startCameraCapture];
+    [self.picture addTarget:self.gpuImageView];
+    [self.picture processImage];
     
 }
 
@@ -49,6 +49,8 @@
 -(void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
 {
     [super touchesBegan:touches withEvent:event];
+    [self.picture removeAllTargets];
+    [self.gpuImageView removeFromSuperview];
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 
@@ -62,6 +64,14 @@
         [_videoCamera addAudioInputsAndOutputs];
     }
     return _videoCamera;
+}
+
+-(GPUImagePicture *)picture
+{
+    if (_picture == nil) {
+        _picture = [[GPUImagePicture alloc] initWithImage:[UIImage imageNamed:@"IMG_0146"]];
+    }
+    return _picture;
 }
 
 - (GPUImageFilter *)defaultFilter
@@ -78,6 +88,18 @@
         _gpuImageView = [[GPUImageView alloc] init];
     }
     return _gpuImageView;
+}
+
+-(GPUImageUIElement *)vieweEement
+{
+    if (_vieweEement == nil) {
+        UILabel *textLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 80, 45)];
+        [textLabel setFont:[UIFont systemFontOfSize:14]];
+        [textLabel setText:@"限额是"];
+        [textLabel setTextColor:[UIColor redColor]];
+        _vieweEement = [[GPUImageUIElement alloc] initWithView:textLabel];
+    }
+    return _vieweEement;
 }
 
 @end

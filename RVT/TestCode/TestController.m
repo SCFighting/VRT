@@ -2,40 +2,60 @@
 //  TestController.m
 //  RVT
 //
-//  Created by SC on 2019/5/9.
-//  Copyright © 2019 SC. All rights reserved.
+//  Created by SC on 2020/1/10.
+//  Copyright © 2020 SC. All rights reserved.
 //
 
 #import "TestController.h"
-
+#import "testOneView.h"
+#import "testTwoView.h"
 @interface TestController ()
-
+@property(nonatomic,strong)testOneView *oneView;
+@property(nonatomic,strong)testTwoView *twoView;
 @end
 
 @implementation TestController
 
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    [self.view setBackgroundColor:UIColor.redColor];
-    NSLog(@"%@str指针地址=%p,str=%@",NSStringFromClass([self class]),&_str,_str);
-    _str = NSStringFromClass([self class]);
-    NSLog(@"修改后%@str指针地址=%p,str=%@",NSStringFromClass([self class]),&_str,_str);
-    // Do any additional setup after loading the view.
-}
-
-- (void)method2:(NSString **)obj
+-(void)loadView
 {
-    *obj = NSStringFromClass([self class]);
+    [super loadView];
+    [self.view addSubview:self.oneView];
+    [self.view addSubview:self.twoView];
+    [self.oneView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.center.mas_equalTo(self.view);
+        make.size.mas_equalTo(CGSizeMake(100, 100));
+    }];
+    [self.twoView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.mas_equalTo(self.oneView);
+        make.size.mas_equalTo(self.oneView);
+        make.centerX.mas_equalTo(self.oneView);
+    }];
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+-(testOneView *)oneView
+{
+    @WeakObj(self);
+    if (_oneView == nil) {
+        _oneView = [[testOneView alloc] init];
+        [_oneView setBackgroundColor:UIColor.redColor];
+        [_oneView setTestBlock:^{
+            NSLog(@"one");
+            @StrongObj(self);
+            [self.twoView setTestBlock:^{
+                NSLog(@"two");
+                NSLog(@"%@",NSStringFromClass([self class]));
+            }];
+        }];
+    }
+    return _oneView;
 }
-*/
 
+-(testTwoView *)twoView
+{
+    if (_twoView == nil) {
+        _twoView = [[testTwoView alloc] init];
+        [_twoView setBackgroundColor:UIColor.yellowColor];
+    }
+    return _twoView;
+}
 @end

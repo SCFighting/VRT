@@ -11,5 +11,6 @@
 
 #import <Masonry/Masonry.h>
 #import <GPUImage/GPUImage.h>
-#import "TestController.h"
+#define WeakObj(o) try{}@finally{} __weak typeof(o) o##Weak = o;
+#define StrongObj(o) autoreleasepool{} __strong typeof(o) o = o##Weak;
 #endif /* Header_h */

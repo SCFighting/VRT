@@ -7,10 +7,13 @@
 //
 
 #import "HomeController.h"
-
-@interface HomeController ()
-@end
+#import "TestController.h"
 
 @implementation HomeController
-
+-(void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
+{
+    [super touchesBegan:touches withEvent:event];
+    TestController *vc = [[TestController alloc] init];
+    [self.navigationController pushViewController:vc animated:YES];
+}
 @end
