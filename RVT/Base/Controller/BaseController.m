@@ -28,7 +28,7 @@
 
 - (void)dealloc
 {
-    NSLog(@"%s",__func__);
+    NSLog(@"[%@  dealloc]",NSStringFromClass([self class]));
 }
 
 @end

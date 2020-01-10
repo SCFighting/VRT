@@ -26,7 +26,7 @@
         make.size.mas_equalTo(CGSizeMake(100, 100));
     }];
     [self.twoView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.mas_equalTo(self.oneView);
+        make.top.mas_equalTo(self.oneView.mas_bottom);
         make.size.mas_equalTo(self.oneView);
         make.centerX.mas_equalTo(self.oneView);
     }];
@@ -34,15 +34,17 @@
 
 -(testOneView *)oneView
 {
-    @WeakObj(self);
+  
     if (_oneView == nil) {
         _oneView = [[testOneView alloc] init];
         [_oneView setBackgroundColor:UIColor.redColor];
+        @WeakObj(self);
         [_oneView setTestBlock:^{
-            NSLog(@"one");
             @StrongObj(self);
+            NSLog(@"one---------------___.%@",NSStringFromClass([self class]));
             [self.twoView setTestBlock:^{
                 NSLog(@"two");
+                @StrongObj(self);
                 NSLog(@"%@",NSStringFromClass([self class]));
             }];
         }];
